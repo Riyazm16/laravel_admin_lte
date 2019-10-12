@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('dashboards/dashboardV1','CustomRouter@loadView')->name('router');
