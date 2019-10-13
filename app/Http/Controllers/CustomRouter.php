@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,14 @@ class CustomRouter extends BaseController
      * @param Request $request
      * @return view
      */
-    public function loadView(Request $request){
-        $route = Route::getFacadeRoot()->current()->uri();
-        $viewName = str_replace("/",".",$route);
+    public function loadView(Request $request, $pageName=null)
+    {
+        $route = Route::currentRouteName();
+        $viewName = $route;
+
+        if (isset($pageName)) {
+            $viewName = $route . '.' . $pageName;
+        }
         return view($viewName);
     }
 }

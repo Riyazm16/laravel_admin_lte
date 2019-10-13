@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboards/dashboardV1');
 });
 
-Route::get('dashboards/dashboardV1','CustomRouter@loadView')->name('router');
+Route::get('dashboards/{routeName}','CustomRouter@loadView')->name('dashboards');
+Route::get('widgets','CustomRouter@loadView')->name('widgets');
+Route::get('layouts/{routeName}','CustomRouter@loadView')->name('layouts');
+Route::get('charts/{routeName}','CustomRouter@loadView')->name('charts');
+Route::get('UI/{routeName}','CustomRouter@loadView')->name('UI');
+Route::get('forms/{routeName}','CustomRouter@loadView')->name('forms');
+Route::get('tables/{routeName}','CustomRouter@loadView')->name('tables');
+Route::get('examples/{routeName}','CustomRouter@loadView')->name('examples');
