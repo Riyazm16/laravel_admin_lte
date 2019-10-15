@@ -23,6 +23,10 @@ class CustomRouter extends BaseController
         if (isset($pageName)) {
             $viewName = $route . '.' . $pageName;
         }
-        return view($viewName);
+        // forms
+        if(strpos($viewName, 'forms') !== false && $pageName == 'general'){
+            $pageName = 'fgeneral';
+        }
+        return view($viewName,compact('pageName'));
     }
 }

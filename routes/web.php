@@ -23,3 +23,4 @@ Route::get('UI/{routeName}','CustomRouter@loadView')->name('UI');
 Route::get('forms/{routeName}','CustomRouter@loadView')->name('forms');
 Route::get('tables/{routeName}','CustomRouter@loadView')->name('tables');
 Route::get('examples/{routeName}','CustomRouter@loadView')->name('examples');
+Route::get('mailbox/{routeName}','CustomRouter@loadView')->name('mailbox');

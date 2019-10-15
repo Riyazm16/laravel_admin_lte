@@ -281,7 +281,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    <strong>Copyright &copy; {{date('Y') }} <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.0-rc.3
@@ -303,6 +303,7 @@
 <script src="{{ asset('plugins/chart.js/Chart.min.js')}}"></script>
 <script src="{{ asset('dist/js/demo.js')}}"></script>
 <script src="{{ asset('dist/js/pages/dashboard3.js')}}"></script>
+
 </body>
 </html>
 @endsection
